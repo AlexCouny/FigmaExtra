@@ -9,14 +9,26 @@
 }
 body {
     background-color: #fff;
+    background: url(./images/2770458.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .header {
-    background-color: #fff;
+    background-color: #0897f0;
     padding: 10px;
     display: flex; /* вмикає флекси та перетворює наші дочерні елементи на лінію (обов'язкове підключення) */
     justify-content: space-around;/* рухає дочерні елементи на лінії  */
     align-items: center;/* вирівнює лінію, рухає її */
     flex-direction: row;/* змінює порядок елементів. column-перетворює лінію на колонку(ось у) */
+}
+.header__logos {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.header__logo-img {
+    width: 70px;
+    padding-left: 17px;
 }
 .header_logo {
     font-style: normal;
@@ -43,7 +55,7 @@ transition: 0.8px;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #F38181;
+    color: #95E1D3;
 }
 .nav_link:nth-child(2) {
     font-family: 'Montserrat';
@@ -85,22 +97,22 @@ transition: 0.8px;
 }
 .txt__block-between {
     text-align: center;
-    font-family: 'Kaushan Script';
+    font-family: 'Kaushan Script', cursive;
 font-style: normal;
 font-weight: 400;
-font-size: 24px;
+font-size: 20px;
 line-height: 35px;
-color: #333333;
+color: #fff;
 }
 .title__block-between {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 font-style: normal;
-font-weight: 700;
+font-weight: 800;
 font-size: 30px;
 line-height: 37px;
 font-variant: all-small-caps;
-color: #333333;
+color: #fff;
 }
 /* Main */
 .main {
@@ -114,24 +126,49 @@ color: #333333;
     justify-content: center;
 }
 .blocks__card {
-    padding: 17px 13px;
+    padding-top: 13px;
+}
+.blocks__card:nth-child(1) {
+    padding-right:  1px;
+}
+.blocks__card:nth-child(2) {
+    padding-left:  41px;
+}
+.blocks__card:nth-child(3) {
+    padding-left:  58px;
+}
+.blocks__card:nth-child(4) {
+    padding-left:  10px;
+}
+.blocks__card:nth-child(5) {
+    padding-left:  22px;
+}
+.blocks__card:nth-child(6) {
+    padding-left:  22px;
 }
 .blocks__card-title {
     font-family: 'Montserrat';
 font-style: normal;
-font-weight: 400;
-font-size: 12px;
+font-weight: 600;
+font-size: 17px;
 line-height: 17px;
 font-variant: small-caps;
-color: #333333;
+color: #fff;
 }
 .blocks__card-info {
     font-family: 'Roboto';
 font-style: normal;
-font-weight: 400;
-font-size: 13px;
+font-size: 14px;
 line-height: 22px;
-color: #B6B6B6;
+color: #fff;
+}
+.card__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1680ea;
+    text-decoration: underline;
 }
 .blocks__card-image {
     width: 20px;
@@ -142,24 +179,24 @@ color: #B6B6B6;
     margin: 80px auto;
 }
 .info-block__txt {
-    font-family: 'Kaushan Script';
+    font-family: 'Kaushan Script', cursive;
 font-style: normal;
 font-weight: 400;
 font-size: 24px;
 line-height: 35px;
-color: #333333;
+color: #fff;
 text-align: center;
 }
 .info-block__title {
     padding-top: 17px;
     padding-bottom: 36px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 font-style: normal;
-font-weight: 700;
+font-weight: 800;
 font-size: 30px;
 line-height: 37px;
 font-variant: all-small-caps;
-color: #333333;
+color: #fff;
 text-align: center;
 }
 .info-block__rechtangle {
@@ -170,13 +207,13 @@ text-align: center;
     margin-left: 525px;
 }
 .info-block__info {
-    font-family: 'Roboto';
+    font-family: 'Courier New', Courier, monospace;
 font-style: normal;
 font-weight: 400;
-font-size: 15px;
+font-size: 20px;
 line-height: 18px;
 text-align: center;
-color: #B6B6B6;
+color: #fff;
 text-align: center;
 }
 .men__photo__info {
@@ -187,30 +224,28 @@ text-align: center;
     padding: 27px 40px;
 }
 .men__photo-img {
+    border-radius: 17px;
     width: 380px;
     height: 470px;
 }
 .men__name {
     font-family: 'Montserrat';
 font-style: normal;
-font-weight: 400;
-font-size: 14px;
+font-weight: 600;
+font-size: 18px;
 line-height: 17px;
 text-align: center;
 font-variant: all-small-caps;
-color: #333333
+color: #fff;
 }
 .men__info {
     font-family: 'Roboto';
 font-style: italic;
-font-weight: 300;
+font-weight: 400;
 font-size: 15px;
 line-height: 18px;
 text-align: center;
-color: #B6B6B6;
-}
-.men__photo-img:nth-child(1) {
-    background-image: url(./images/first-man\ 1.jpg);
+color: #e69f9f;
 }
 .footer {
     width: 1200px;
@@ -232,36 +267,9 @@ font-weight: 400;
 font-size: 14px;
 line-height: 17px;
 text-align: center;
-color: #333333;
+color: #fff;
 }
-.footer__email {
-    border: 1px solid #B6B6B6;
-    width: 230px;
-font-family: 'Roboto';
-font-style: italic;
-font-weight: 300;
-font-size: 14px;
-line-height: 16px;
-text-align: center;
-color: #B6B6B6;
-margin-left: 0px;
-display: flex;
-align-items: end;
-}
-.footer__button {
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-text-align: center;
-font-variant: all-small-caps;
-color: #FFFFFF;
-background: #95E1D3;
-width: 90px;
-height: 30px;
-cursor: pointer;
-}
+
 span {
     font-family: 'Montserrat';
     font-style: normal;
@@ -271,4 +279,26 @@ span {
     text-align: center;
     color: #333333;
     color: red;
+}
+.for__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mark__button {
+    padding: 30px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+.txt {
+}
+.link__mark {
+    font-size: 45px;
+    color: #fff;
+}
+.other__body {
+    background: url(./images/wp1947904.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
 }
