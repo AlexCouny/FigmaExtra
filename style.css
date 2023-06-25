@@ -12,6 +12,7 @@ body {
     background: url(./images/2770458.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .header {
     background-color: #0897f0;
@@ -48,6 +49,21 @@ color: #fff;
 font-size: 12px;
 text-transform: uppercase;
 transition: 0.8px;
+padding: 10px;
+position: relative; /* стає головним */
+}
+.nav_link::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 10%;
+    background-color: aqua;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+.nav_link:hover::before {
+    width: 100%;
 }
 .nav_link:nth-child(1) {
     font-family: 'Montserrat';
@@ -116,7 +132,6 @@ color: #fff;
 }
 /* Main */
 .main {
-    width: 1500px;
     margin: 0 auto;
 }
 .blocks {
@@ -173,6 +188,7 @@ color: #fff;
 .blocks__card-image {
     width: 20px;
 }
+/* ----Second info block---- */
 .second__info-block {
     width: 1104px;
     height: 221px;
@@ -216,6 +232,7 @@ text-align: center;
 color: #fff;
 text-align: center;
 }
+/* ----Men Photos---- */
 .men__photo__info {
     display: flex;
     justify-content: center;
@@ -223,10 +240,71 @@ text-align: center;
 .men__card {
     padding: 27px 40px;
 }
-.men__photo-img {
+.men__photo-img1 {
     border-radius: 17px;
     width: 380px;
     height: 470px;
+    position: relative;
+    background-image: url(./images/first-man\ 1.jpg);
+}
+.men__photo-img1::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f38181ba;
+    opacity: 0%;
+    border-radius: 17px;
+    transition: 0.5s;
+}
+.men__photo-img1:hover::before {
+    opacity: 100%;
+}
+.men__photo-img2 {
+    border-radius: 17px;
+    width: 380px;
+    height: 470px;
+    position: relative;
+    background-image: url(./images/second-man\ 1.jpg);
+}
+.men__photo-img2::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f38181ba;
+    opacity: 0%;
+    border-radius: 17px;
+    transition: 0.5s;
+}
+.men__photo-img2:hover::before {
+    opacity: 100%;
+}
+.men__photo-img3 {
+    border-radius: 17px;
+    width: 380px;
+    height: 470px;
+    position: relative;
+    background-image: url(./images/third-man\ 1.png);
+}
+.men__photo-img3::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f38181ba;
+    opacity: 0%;
+    border-radius: 17px;
+    transition: 0.5s;
+}
+.men__photo-img3:hover::before {
+    opacity: 100%;
 }
 .men__name {
     font-family: 'Montserrat';
@@ -256,9 +334,6 @@ color: #e69f9f;
 .footer__info {
     display: flex;
     justify-content: space-between;
-}
-.line__footer {
-    
 }
 .footer__txt {
     font-family: 'Montserrat';
@@ -290,8 +365,6 @@ span {
     cursor: pointer;
     color: #fff;
     background-color: #000;
-}
-.txt {
 }
 .link__mark {
     font-size: 45px;
